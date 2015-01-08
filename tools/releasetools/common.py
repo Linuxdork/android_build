@@ -145,7 +145,6 @@ def LoadInfoDict(input):
 
   if "device_type" not in d:
     d["device_type"] = "MMC"
-
   try:
     data = read_helper("META/imagesizes.txt")
     for line in data.split("\n"):
