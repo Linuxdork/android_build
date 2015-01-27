@@ -1399,7 +1399,8 @@ ifeq ($(TARGET_ARCH),arm64)
 	built_ota_tools += $(call intermediates-dir-for,EXECUTABLES,updater,,,32)/updater
 else
 	built_ota_tools += $(call intermediates-dir-for,EXECUTABLES,updater)/updater
-endif$(BUILT_TARGET_FILES_PACKAGE): PRIVATE_OTA_TOOLS := $(built_ota_tools)
+endif
+$(BUILT_TARGET_FILES_PACKAGE): PRIVATE_OTA_TOOLS := $(built_ota_tools)
 
 $(BUILT_TARGET_FILES_PACKAGE): PRIVATE_RECOVERY_API_VERSION := $(RECOVERY_API_VERSION)
 $(BUILT_TARGET_FILES_PACKAGE): PRIVATE_RECOVERY_FSTAB_VERSION := $(RECOVERY_FSTAB_VERSION)
