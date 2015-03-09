@@ -42,7 +42,7 @@ def mangle_build_prop(prop, overrides):
 def mangle_default_prop(prop):
   # If ro.debuggable is 1, then enable adb on USB by default
   # (this is for userdebug builds)
-  if prop.get("ro.build.type") == "eng":
+  if prop.get("ro.adb.secure") != "1":
     val = prop.get("persist.sys.usb.config")
     if val == "":
       val = "adb"
